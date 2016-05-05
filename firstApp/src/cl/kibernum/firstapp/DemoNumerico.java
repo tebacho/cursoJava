@@ -1,10 +1,13 @@
 package cl.kibernum.firstapp;
 
 public class DemoNumerico {
+    static final String one ="uno";
+    static String tres = "tres";
     public static void main(String[] args) {
+                
         DemoNumerico demo = new DemoNumerico();
         try{
-        System.out.println("El resultado es: "+demo.getResult(1, 2, 'p'));
+        System.out.println("El resultado es: "+demo.getResult(1, 2, Operaciones.DIVISION.signo));
         }catch(NoSuchOperationException nsee){
             System.out.println(nsee.getMessage());
         }catch(ZeroDivisionException zde){
@@ -102,3 +105,16 @@ class Division implements Calcular{
             super("ERROR: NO EXISTE OPERADOR "+op);
         }
     }
+enum Operaciones{
+    SUMA('+'),
+    RESTA('-'),
+    MULTIPLICACION('*'),
+    DIVISION('/');
+    
+    public final char signo;
+    
+    private Operaciones(char signo){
+        this.signo=signo;
+    }
+    
+}
