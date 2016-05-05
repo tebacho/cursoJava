@@ -44,8 +44,22 @@ public class EstructurasDeControlDemo {
     }
     private static void whileDemo(){
         int cont=0;
-        while(cont !=1){
-            System.out.println(cont = (int)(Math.random()*9));
-        } 
+        cont = diff();
+        
+    }
+    private static int diff(){
+        int cont=0;
+        while(true){
+            double antes=(Runtime.getRuntime().freeMemory());
+            System.out.println("i inside while ["+(++cont)+"]");
+            System.gc();
+            double diff = antes-Runtime.getRuntime().freeMemory();
+            System.out.println("diferencia memoria "+diff);
+            if(diff<0){
+               System.exit(0);  
+            }
+        return 0;
+        }
+        
     }
 }
