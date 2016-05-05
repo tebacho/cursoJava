@@ -4,7 +4,8 @@ public class EstructurasDeControlDemo {
 
     public static void main(String[] args) {
 //        ifDemo();
-        switchDemo();
+//        switchDemo();
+        whileDemo();
     }
     private static void ifDemo(){
         int i=12, j=11;
@@ -40,5 +41,11 @@ public class EstructurasDeControlDemo {
         default:
             System.out.println("default");
         }
+    }
+    private static void whileDemo(){
+        int cont=0;
+        while(cont !=1){
+            System.out.println(cont = (int)(Math.random()*9));
+        } 
     }
 }
