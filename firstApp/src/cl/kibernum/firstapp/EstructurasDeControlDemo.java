@@ -48,7 +48,7 @@ public class EstructurasDeControlDemo {
         
     }
     private static int diff(){
-        int cont=0;
+        int cont=0;  
         while(true){
             double antes=(Runtime.getRuntime().freeMemory());
             System.out.println("i inside while ["+(++cont)+"]");

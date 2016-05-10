@@ -7,7 +7,7 @@ public class DemoNumerico {
                 
         DemoNumerico demo = new DemoNumerico();
         try{
-        System.out.println("El resultado es: "+demo.getResult(1, 2, Operaciones.DIVISION.signo));
+        System.out.println("El resultado es: "+demo.getResult(1, 2, Operaciones.DIVISION));
         }catch(NoSuchOperationException nsee){
             System.out.println(nsee.getMessage());
         }catch(ZeroDivisionException zde){
@@ -16,7 +16,7 @@ public class DemoNumerico {
             System.out.println(ex.getMessage());            
         }
     }
-    public double getResult(double i, double j, char op){
+    public double getResult(double i, double j, Operaciones op){
         CalculoFactory cf = CalculoFactory.getInstance();
         Calcular calc = cf.getCalculador(op);
         double resultado = calc.calcular(i, j);
@@ -35,19 +35,19 @@ class CalculoFactory{
         }
         return instance;
     }
-    public Calcular getCalculador(char op){
-        switch (op) {
+    public Calcular getCalculador(Operaciones op){
+        Calcular calc = null;
+        switch (op.signo) {
             case '+':
-                return new Suma();
+                calc = new Suma();
             case '-':
-                return new Resta();
+                calc = new Resta();
             case '*':
-                return new Multiplicacion();
+                calc = new Multiplicacion();
             case '/':
-                return new Division();
-            default:
-                throw new NoSuchOperationException(op);
+                calc = new Division();
         }
+        return calc;
     }
 }
 
