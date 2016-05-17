@@ -1,5 +1,7 @@
 package cl.kibernum.objeto;
 
+import java.util.Objects;
+
 public class Persona {
 
     public static void main(String[] args) {
@@ -22,10 +24,10 @@ public class Persona {
         sapo.noHaceNad();
     }
 
-    int edad;
-    String nombre;
-    float peso;
-    String colorOjos;
+    private int edad;
+    private String nombre;
+    private float peso;
+    private String colorOjos;
     static String genero;
 
     public int getEdad() {
@@ -71,9 +73,7 @@ public class Persona {
     public static void setGenero(String genero) {
         Persona.genero = genero;
     }
-    
-    
-
+ 
     public void print() {
 
         System.out.println("Nombre Persona: " + getNombre());
@@ -100,5 +100,5 @@ class Sapo {
     public void noHaceNad() {
 
     }
-
+    
 }
