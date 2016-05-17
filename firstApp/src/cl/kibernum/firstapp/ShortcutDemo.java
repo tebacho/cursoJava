@@ -13,6 +13,7 @@ public class ShortcutDemo {
         if(x^x || y^!y){
             System.out.println("SI");
         }
+        
     }
 static boolean true1(){
     System.out.println("true1");
