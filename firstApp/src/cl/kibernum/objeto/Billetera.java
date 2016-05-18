@@ -5,7 +5,7 @@ public class Billetera {
     private String material;
     private int monto;
     private String color;
-    public static final String MARCA = "Shansho";
+    public static final String MARCA = "SHAN-SHOU";
     public Billetera(String material, int monto, String color) {
         this.material = material;
         this.monto = monto;
