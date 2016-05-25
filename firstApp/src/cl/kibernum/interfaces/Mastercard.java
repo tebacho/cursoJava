@@ -1,8 +1,8 @@
 package cl.kibernum.interfaces;
 
-public class Mastercard implements CreditCard{
+public class Mastercard implements CreditCard {
 
-    @Override
+   @Override
     public int getHomeCredit(int id, int wage, int year) {
         return (int)(id*(wage*0.5f)*(0.3f*year));
     }
