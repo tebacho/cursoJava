@@ -1,6 +1,5 @@
 package cl.kibernum.entornografico;
 
-import java.awt.FlowLayout;
 import javax.swing.*;
 
 public class EntornoGrafico {

@@ -165,7 +165,7 @@ public class MyFrame extends javax.swing.JFrame {
         
     }
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        JOptionPane.showMessageDialog(null, "pressed");
+
         Persona persona = Persona.newInstanceofPersona();
         persona.setEdad((int)spinnerEdad.getValue());
         persona.setNombre(txtNombre.getText());
