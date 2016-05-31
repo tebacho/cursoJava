@@ -35,6 +35,7 @@ public class MyCollection {
         
         Collections.sort(list);
         System.out.println(Arrays.toString(list.toArray()));
+        
         Collections.shuffle(list);
         System.out.println(Arrays.toString(list.toArray()));
         
