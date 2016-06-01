@@ -16,6 +16,25 @@ public class Persona {
     private int edad;
     private int rut;
     private CreditCard ccar;
+    private String gender;
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+    
     private Persona(){
         this("",0,0,null);
     }
